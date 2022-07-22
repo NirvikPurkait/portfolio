@@ -8,9 +8,15 @@
   box-sizing: border-box;
 }
 
+/* button{
+  cursor: pointer;
+} */
+
 body{
   background-color: #212529;
   color: #f8f9fa;
+  /* overflow-y: visible !important; */
+  overflow-x: hidden;
 }
 
 header{
@@ -35,13 +41,33 @@ nav{
 
 .nav-bar{
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 60vw;
   justify-content: space-between;
   align-items: center;
 }
 
-.contact{
-  display: flex;
-  flex-basis: 50%;
-  justify-content: end;
+.nav-item{
+  position: relative;
 }
+
+.nav-link{
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.dropdown{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-item:hover .dropdown{
+  opacity: 1;
+}
+

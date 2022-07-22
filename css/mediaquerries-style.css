@@ -1,0 +1,85 @@
+/* typical break points are
+768px, 992px, 1200px */
+
+/* colors used in the css
+#F0F8FF; #1E90FF; #ADD8E6; #84888c; #545759; #00ffff; #8a2be2; #ffffff; #ff0000; #004cff; #4267B2; #fed373; #f15245; #d92e7f; #9b36b7; #515ecf; #1DA1F2; #25D366; #0077b5; #333333
+*/
+
+/* When a new class or id added, add the path in comment */
+
+
+/* applies upto the limit  */
+/* max-width have to be ordered from largest to smallest to work properly */
+/* __________________________________________________________________________________________________ */
+
+@media screen and (max-width:768px){
+  /* .nav-bar{
+    display: none;
+  } */
+  .nav-bar{
+    position: absolute;
+    background: whitesmoke;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: all 0.5s linear;
+  }
+
+  .open-nav-bar{
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .hamburger{
+    display: block;
+    cursor: pointer;
+    padding: 0 5px;
+  }
+
+  .hamburger button{
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    transform: rotateY(0deg);
+    transition: all 0.5s linear;
+    cursor: pointer;
+    position: relative;
+    right: 0;
+  }
+  
+  .open-nav-bar + .hamburger button{
+    transform: rotateY(180deg);
+    position: relative;
+    right: 1330%;
+  }
+
+
+}
+
+/* applies exceeding the limits */
+/* min-width have to be ordered from smallest to largest to work properly */
+/* __________________________________________________________________________________________________ */
+@media screen and (min-width:768px){
+  /* .nav-bar{
+    display: flex;
+  } */
+
+  .contact{
+    display: flex;
+    flex-basis: 30%;
+    justify-content: end;
+  }
+  
+  .hamburger{
+    display: none;
+  }
+}
+
+

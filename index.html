@@ -9,10 +9,12 @@
 
   <!-- custom css links -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mediaquerries-style.css">
   <link rel="stylesheet" href="css/svg-style.css">
 
   <!-- custom js link -->
   <script src="js/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/62bfe66902.js" crossorigin="anonymous"></script>
 
   <!-- favicon link -->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -23,19 +25,36 @@
 
   <header>
     <section>
+
       <nav>
+
         <div class="nav-logo">
           <a href="#">
             <svg><use href="#nirvik-logo"></use></svg>
           </a>
         </div>
-        <div class="nav-bar">
-          <div class="about"><button>About</button></div>
-          <div class="work"><button>Work</button></div>
-          <div class="galary"><button>Galary</button></div>
-          <div class="contact"><button>Contact</button></div>
+
+        <div id="nav-bar" class="nav-bar">
+          <div class="about nav-item">
+            <button class="nav-link">About</button>
+          </div>
+          <div class="work nav-item">
+            <button class="nav-link">Work</button>
+          </div>
+          <div class="galary nav-item">
+            <button class="nav-link">Galary</button>
+          </div>
+          <div class="contact nav-item">
+            <button class="nav-link">Contact</button>
+          </div>
         </div>
+
+        <div id="hamburger" class="hamburger">
+          <button><i class="fa-solid fa-chevron-left"></i></button>
+        </div>
+
       </nav>
+      
     </section>
   </header>
 
