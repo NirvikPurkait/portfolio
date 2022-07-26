@@ -111,11 +111,11 @@
     display: flex;
   } */
 
-  .contact{
+  /* .contact{
     display: flex;
     flex-basis: 30%;
     justify-content: end;
-  }
+  } */
   
   .hamburger{
     display: none;

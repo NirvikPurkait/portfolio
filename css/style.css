@@ -1,5 +1,11 @@
 :root{
   --default-padding: 0 5% 2%;
+
+  --dark-bg-color: #212529;
+  --dark-text-color: #f8f9fa;
+
+  --light-bg-color: #f8f9fa;
+  --light--text-color: #212539;
 }
 
 *, ::after, ::before{
@@ -13,10 +19,15 @@
 } */
 
 body{
-  background-color: #212529;
-  color: #f8f9fa;
-  /* overflow: visible !important; */
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
   overflow-x: hidden;
+  /* overflow: visible !important; */
+}
+
+body.light{
+  background-color: var(--light-bg-color);
+  color: var(--light--text-color);
 }
 
 header{
