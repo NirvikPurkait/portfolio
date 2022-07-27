@@ -1,0 +1,32 @@
+/* :root{
+  --default-padding: 0 5%;
+
+  --dark-bg-color: #212529;
+  --dark-text-color: #f8f9fa;
+
+  --light-bg-color: #f8f9fa;
+  --light--text-color: #212539;
+
+} */
+
+body.light{
+  background-color: var(--light-bg-color);
+  color: var(--light--text-color);
+}
+
+
+.light .nav-item button{
+  color: var(--light--text-color);
+}
+
+.light #theme-button{
+  color: var(--light--text-color);
+}
+
+.light #theme-button .moon{
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.light #theme-button .sun{
+  transform: translateX(-200%) translateY(-50%);
+}

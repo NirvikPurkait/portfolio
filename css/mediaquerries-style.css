@@ -13,113 +13,12 @@
 /* __________________________________________________________________________________________________ */
 
 @media screen and (max-width:768px){
-  /* .nav-bar{
-    display: none;
-  } */
-  .nav-bar {
-    position: absolute;
-    background-color: white;
-    clip-path: circle(0% at 100% 0%);
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    pointer-events: none;
-    transition: all 0.5s linear;
-  }
-  
-  .open-nav-bar {
-    clip-path: circle(90% at 20% 30%);
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .hamburger{
-    display: block;
-    cursor: pointer;
-    padding: 0 5px;
-  }
-
-  .hamburger button{
-    background: transparent;
-    /* background-color: rgb(181, 131, 131); */
-    width: 40px;
-    height: 40px;
-    border: none;
-    font-size: 30px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .hamburger button::before{
-    content: '';
-    background: url('../images/bars-solid.svg') no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 0%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform: translateX(0%);
-    transition: all 0.5s cubic-bezier(1,-1.35,.14,2.5);
-  }
-
-  .open-nav-bar + .hamburger button::before{
-    transform: translateX(-100%);
-  }
-
-  .hamburger button::after{
-    content: '';
-    background: url('../images/cross-solid.svg') no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 0%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform: translateX(100%);
-    transition: all 0.5s cubic-bezier(1,-1.35,.14,2.5);
-  }
-  
-  .open-nav-bar + .hamburger button::after{
-    transform: translateX(0%);
-  }
-/*   
-  .open-nav-bar + .hamburger button{
-    transform: rotateY(180deg);
-    position: relative;
-    right: 0%;
-  } */
-
-
 }
 
 /* applies exceeding the limits */
 /* min-width have to be ordered from smallest to largest to work properly */
 /* __________________________________________________________________________________________________ */
 @media screen and (min-width:768px){
-  /* .nav-bar{
-    display: flex;
-  } */
-
-  /* .contact{
-    display: flex;
-    flex-basis: 30%;
-    justify-content: end;
-  } */
-  
-  .hamburger{
-    display: none;
-  }
 }
 
 
