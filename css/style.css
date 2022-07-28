@@ -202,7 +202,7 @@ nav{
 
 #project{
   position: relative;
-  height: 500px;
+  /* height: 500px; */
   background: #FCDA68;
 }
 
@@ -211,10 +211,111 @@ nav{
   position: absolute;
   left: 0;
   right: 0;
-  height: 50%;
+  height: 270px;
   background: var(--blue);
   clip-path: path('M0,96L60,128C120,160,240,224,360,229.3C480,235,600,181,720,176C840,171,960,213,1080,202.7C1200,192,1320,128,1380,96L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z');
   transform: rotate(180deg) scaleX(1.5);
 }
+
+.project-details{
+  padding: 10% 0 0;
+  text-align: center;
+  color: #7462E1;
+  font-size: 2rem;
+}
+
+.projet-template{
+  padding: 8% 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.template{
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+  background-color: #212529;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  /* opacity: 0.8; */
+  box-shadow: 10px 10px 10px #7462E1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s linear
+}
+
+/* .template:hover{
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 15px 15px 15px #7462e1;
+} */
+
+.template-1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+  background: url('../images/project-template-1.jpg');
+  background-size: cover
+}
+.template-2::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+  background: url('../images/project-template-2.jpg');
+  background-size: cover
+}
+.template-3::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+  background: url('../images/project-template-3.jpg');
+  background-size: cover
+}
+
+.template-hover-effect{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(50%);
+  width: 100%;
+  height: 100%;
+  padding: 5px 8px;
+  background: #21252977;
+  transition: all 0.3s linear;
+}
+
+.template:hover .template-hover-effect{
+  transform: translateY(0%);
+}
+
+.template button{
+  position: relative;
+  padding: 10px 14px;
+  margin-bottom: 30px;
+  background: #7462E1;
+  color: var(--dark-text-color);
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+
+
 
 /* ___________________________________________footer section___________________________________________ */
