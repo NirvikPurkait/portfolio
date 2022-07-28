@@ -30,6 +30,8 @@ body{
   /* overflow: visible !important; */
 }
 
+
+/* ___________________________________________header section___________________________________________ */
 header{
   position: relative;
 }
@@ -48,13 +50,6 @@ nav{
   width: 100px;
   height: 50px;
 }
-
-/* .nav-details{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-basis: 50%;
-} */
 
 .nav-item{
   display: flex;
@@ -91,26 +86,27 @@ nav{
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: translateX(-50%) translateY(-50%); */
 }
 
 #theme-button .moon{
-  transform: translateX(100%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%) scale(0);
   transition: all 0.3s linear;
 }
 
 #theme-button .sun{
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%) scale(1);
   transition: all 0.3s linear;
 }
 
 
 
-
+/* ___________________________________________content section___________________________________________ */
 .education{
+  --color: #f8f9fa;
+
   position: relative;
   background: var(--blue);
-  /* height: 300px; */
+  color: var(--color);
 }
 
 .education::before {
@@ -120,31 +116,105 @@ nav{
   top: 0;
   left: 0;
   right: 0;
-  height: 40%;
+  height: 50%;
   transform: skewY(-3deg);
   transform-origin: left;
   z-index: -1;
 }
 
-.education::after {
-  content: '';
+.education-details{
+  padding: 20% 0;
+}
+
+.details:nth-child(odd){
+  position: relative;
+  text-align: left;
+  width: 50%;
+  height: 12rem;
+  margin-left: auto;
+}
+
+.details:nth-child(even){
+  position: relative;
+  text-align: right;
+  width: 50%;
+  height: 12rem;
+  margin-right: auto;
+}
+
+.details:nth-child(odd) .stream{
   position: absolute;
-  background: var(--blue);
-  top: 100%;
+  top: 50%;
   left: 0;
-  right: 0;
-  height: 40%;
-  transform: skewY(-3deg);
-  transform-origin: left;
-  z-index: -1;
+  transform: translate(0%, -50%);
+  width: 50%;
+  height: 10px;
+  background-image: linear-gradient(to right, #FFE87C , transparent 80%);
+}
+
+.details:nth-child(even) .stream{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  width: 50%;
+  height: 10px;
+  background-image: linear-gradient(to left, #FFE87C , transparent 80%);
+}
+
+.details:nth-child(odd) .institute-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  padding: 0 0 0 34px;
+}
+
+.details:nth-child(even) .institute-details {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(0, -50%);
+  padding: 0 34px 0 0;
+}
+
+.institute-name{
+  font-size: 2rem;
+  padding: 0 0 28px 0;
+}
+
+.passing-year{
+  font-size: 1.3rem;
+}
+
+.marks{
+  font-size: 1.6rem;
 }
 
 .main-stream{
   position: absolute;
-  height: 500px;
-  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--blue) 10% , var(--blue) 90%,  rgba(0, 0, 255, 0));
+  width: 10px;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: linear-gradient(to bottom, transparent, #FFE87C 20% , #FFE87C 80%, transparent);
 }
+
+#project{
+  position: relative;
+  height: 500px;
+  background: #FCDA68;
+}
+
+#project::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--blue);
+  clip-path: path('M0,96L60,128C120,160,240,224,360,229.3C480,235,600,181,720,176C840,171,960,213,1080,202.7C1200,192,1320,128,1380,96L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z');
+  transform: rotate(180deg) scaleX(1.5);
+}
+
+/* ___________________________________________footer section___________________________________________ */

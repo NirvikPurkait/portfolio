@@ -24,9 +24,11 @@ body.light{
 }
 
 .light #theme-button .moon{
-  transform: translateX(-50%) translateY(-50%);
+  /* transform: translateX(-50%) translateY(-50%); */
+  transform:  translateX(-50%) translateY(-50%) scale(1);
 }
 
 .light #theme-button .sun{
-  transform: translateX(-200%) translateY(-50%);
+  /* transform: translateX(-200%) translateY(-50%); */
+  transform: translateX(-50%) translateY(-50%) scale(0);
 }
